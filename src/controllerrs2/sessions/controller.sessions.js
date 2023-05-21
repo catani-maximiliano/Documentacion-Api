@@ -8,7 +8,7 @@ class SessionRouter extends Route {
           res.sendSuccess(req.session.user);
         }
         else {
-          res.sendSuccess({ message: 'no eres un usuario logeado' });
+          res.sendSuccess({ message: 'no eres un usuario logueado' });
         }
       } 
       catch (error) {

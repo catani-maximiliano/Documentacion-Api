@@ -5,6 +5,7 @@ const mongoConfig = require("./config/mongoConfig/config.mongo");
 const cookieParser = require("cookie-parser");
 const { port } = require("./config");
 const pasportConfig = require("./config/pasportConfig/config.pasport");
+const swaggerRoutes = require('./utils/swagger');
 
 /**se utiliza para conectar y configurar una base de datos MongoDB en una 
  * aplicación Node.js utilizando la instancia de Express app. */
@@ -33,6 +34,9 @@ handlebarsConfig(app);
 app.get("/", (req, res) => {
   res.render("index", { mesagge: "Hi from server without socket.io" });
 });
+
+// Rutas de Swagger
+swaggerRoutes(app);
 
 /**
 Este código inicia el servidor en el puerto especificado y muestra un mensaje en la consola indicando que el servidor 

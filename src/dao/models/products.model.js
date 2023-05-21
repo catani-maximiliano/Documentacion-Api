@@ -8,7 +8,6 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 
 const productsCollection = 'product';
 
-
 /**Este código define un esquema de Mongoose para el modelo de producto. El esquema especifica los campos y tipos 
  * de datos que componen un producto, así como algunas opciones adicionales.
 
